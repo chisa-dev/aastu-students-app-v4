@@ -24,7 +24,7 @@ FlutterFlow projects are built to run on the Flutter **stable** release.
 
 <div align="center">
   <strong>Version 1 - (2021)</strong> &nbsp;&nbsp;&nbsp;&nbsp; 
-  <strong>Version 3 - (2022)</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Version 2 - (2022)</strong> &nbsp;&nbsp;&nbsp;&nbsp;
   <strong>Version 3 - (2023)</strong> &nbsp;&nbsp;&nbsp;&nbsp;
   <strong>Version 4 - (2025)</strong>
 </div>
@@ -64,7 +64,7 @@ flutter serve
 ## 🤝 Contributing
 Contributions are welcome! Choose one of the following ways to contribute:
 
-1. **Build standalone features separately in Flutter** and submit your code via a pull request.
+1. **Build standalone features separately in Flutter** and submit your code.
 2. **Report issues** by creating a GitHub issue.
 3. **Directly fix an issue** and submit a pull request.
 
