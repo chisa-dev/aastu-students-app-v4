@@ -1,0 +1,168 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /userPosts/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if resource.data.postUser == /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if true;
+      allow write: if request.auth.uid == document;
+      allow delete: if request.auth.uid == document;
+    }
+
+    match /postComments/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow delete: if false;
+    }
+
+    match /userStories/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow delete: if false;
+    }
+
+    match /storyComments/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if resource.data.commentUser == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow delete: if resource.data.commentUser == /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    match /friends/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /chats/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if /databases/$(database)/documents/users/$(request.auth.uid) in resource.data.users;
+      allow delete: if resource.data.user_a == /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    match /chat_messages/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow delete: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    match /Grade/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if request.auth.uid == resource.data.id;
+    }
+
+    match /Grade/{parent}/myGrade/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if request.auth.uid == resource.data.uid;
+    }
+
+    match /{path=**}/myGrade/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /MyVirtualID/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == resource.data.uid;
+      allow delete: if request.auth.uid == resource.data.uid;
+    }
+
+    match /Constants/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Gallery/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /Community/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /ReligiousCommunities/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /DailyNegarit/{document} {
+      allow create: if request.auth.uid == request.resource.data.id;
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == resource.data.id;
+      allow delete: if request.auth.uid == resource.data.id;
+    }
+
+    match /DailyNegarit/{parent}/MyNotes/{document} {
+      allow create: if request.auth.uid == request.resource.data.uid;
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == resource.data.uid;
+      allow delete: if request.auth.uid == resource.data.uid;
+    }
+
+    match /{path=**}/MyNotes/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /PremiumAccounts/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /Developers/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /deletedUsers/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /userPreferences/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+
+    match /books/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if false;
+    }
+  }
+}
