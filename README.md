@@ -74,7 +74,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 🙌 Acknowledgements
 - [Gemechis Elias](https://github.com/chisa-dev) - Project Developer
 - [Getabalew Asfaw](https://github.com/GetabalewAsfaw) - UI Designer
-- [Ayenew Tarekegn](https://github.com/xxx) - Developer / Early Tester
-- [Dagimawi Babi](https://github.com/xxx) - Early Tester
-- [Abigel F](https://github.com/xxx) - Product / Early Tester
+- [Ayenew Tarekegn](https://github.com/Ayenewtarekegn18) - Developer / Early Tester
+- [Dagimawi Babi](https://github.com/dagmawibabi) - Early Tester
+- [Abigail F](#) - Product / Early Tester
 - [Yohannes](https://t.me/joey_yos) - Early Tester
