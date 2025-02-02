@@ -1,0 +1,71 @@
+# Flutter build files
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+.packages
+.pub-cache/
+.pub/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# macOS
+*.DS_Store
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/.generated/
+ios/.last_build_id
+
+# Android
+android/.gradle/
+android/app/*.keystore
+android/key.properties
+android/local.properties
+
+# Firebase / Google Services
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Generated files
+*.g.dart
+*.mocks.dart
+
+# Coverage reports
+coverage/
+
+# Debug files
+debug.log
+
+# Web
+web/.dart_tool/
+web/.firebase/
+web/firebase.json
+
+# Linux
+linux/flutter/generated_plugin_registrant.cc
+linux/.dart_tool/
+
+# Windows
+windows/flutter/generated_plugin_registrant.cc
+windows/.dart_tool/
+
+# Fuchsia
+.fuchsia/
+
+# Temporary files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
