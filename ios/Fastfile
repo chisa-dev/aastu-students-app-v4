@@ -1,0 +1,21 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and upload to TestFlight"
+  lane :build_and_upload do
+    build_ios_app(
+      workspace: "Runner.xcworkspace", # Ensure this matches your Xcode workspace name
+      scheme: "Runner",               # Ensure this matches your Xcode scheme name
+      export_method: "app-store",     # Use "app-store" for production builds
+      output_directory: "./build/ios",
+      clean: true,
+      codesigning_identity: "Apple Distribution",
+      export_options: {
+        provisioningProfiles: {
+          "com.horansoftware.aastu" => "AASTU Students Community App Provisioning Profile"
+        }
+      }
+    )
+    upload_to_testflight
+  end
+end

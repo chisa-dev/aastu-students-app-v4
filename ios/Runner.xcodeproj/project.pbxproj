@@ -5,7 +5,16 @@
 	};
 	objectVersion = 46;
 	objects = {
+		  // Enable Push Notifications
+    SystemCapabilities = {
+        com.apple.Push = { enabled = 1; };
+    };
 
+    // Enable Background Modes
+    SystemCapabilities = {
+        com.apple.BackgroundModes = { enabled = 1; };
+    };
+	
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
