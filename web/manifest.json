@@ -1,0 +1,23 @@
+{
+    "name": "AASTU STUDENTS",
+    "short_name": "AASTU STUDENTS",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/app_launcher_icon.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg"
+        },
+        {
+            "src": "icons/app_launcher_icon.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ]
+}
